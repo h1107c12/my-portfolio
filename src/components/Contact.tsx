@@ -148,11 +148,6 @@ export default function Contact() {
             작업 문의하기
           </a>
         </div>
-
-        <div className="mt-20 text-gray-400 text-sm">
-          <p>이메일: hello@editor.com</p>
-          <p className="mt-2">평일 10:00 - 18:00 답변드립니다</p>
-        </div>
       </div>
     </section>
   );

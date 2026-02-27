@@ -49,7 +49,7 @@ export default function About() {
         <div className="mt-10 grid gap-5 md:gap-6 md:grid-cols-3">
           <div className="bg-[#050b10] border border-cyan-500/15 rounded-xl px-6 py-6 text-center">
             <h4 className="text-cyan-300 mb-2">하이라이트 영상</h4>
-            <p className="text-xs md:text-sm text-gray-300">시선을 사로잡는 컷 구성과 속도감 있는 편집</p>
+            <p className="text-xs md:text-sm text-gray-300">핵심 장면을 강조해 몰입감을 높이는 편집</p>
           </div>
 
           <div className="bg-[#050b10] border border-cyan-500/15 rounded-xl px-6 py-6 text-center">

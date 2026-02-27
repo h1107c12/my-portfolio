@@ -1,24 +1,17 @@
 // src/components/Showreel.tsx
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Play, X } from "lucide-react";
 
 export default function Showreel() {
   const [open, setOpen] = useState(false);
-  const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  const videoSrc = "/videos/showreel-2025.mp4"; // public 폴더 기준
+  // ✅ 여기만 바꿔라 (유튜브 영상 ID)
+  const YOUTUBE_ID = "YOUR_YOUTUBE_VIDEO_ID";
+
   const posterSrc =
     "https://images.unsplash.com/photo-1575320854760-bfffc3550640?auto=format&fit=crop&w=1400&q=80";
 
   const close = () => setOpen(false);
-
-  // 모달 닫힐 때 영상 멈추고 0초로
-  useEffect(() => {
-    if (!open && videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  }, [open]);
 
   // ESC로 닫기
   useEffect(() => {
@@ -28,6 +21,18 @@ export default function Showreel() {
     if (open) window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
+
+  // 유튜브 임베드 URL (autoplay/mute는 정책 이슈 줄이려고 넣음)
+  const embedSrc = useMemo(() => {
+    const params = new URLSearchParams({
+      autoplay: "1",
+      mute: "1",
+      rel: "0",
+      playsinline: "1",
+      modestbranding: "1",
+    });
+    return `https://www.youtube.com/embed/${YOUTUBE_ID}?${params.toString()}`;
+  }, [YOUTUBE_ID]);
 
   return (
     <section
@@ -56,7 +61,10 @@ export default function Showreel() {
               src={posterSrc}
               alt="Showreel 2025"
               className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+              loading="lazy"
             />
+
+            {/* 어두운 그라데이션 */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
 
             {/* 플레이 버튼 */}
@@ -91,7 +99,7 @@ export default function Showreel() {
           role="dialog"
           aria-modal="true"
           onMouseDown={(e) => {
-            // 배경 클릭 시 닫기 (비디오 영역 클릭은 제외)
+            // 배경 클릭 시 닫기 (플레이어 영역 클릭은 제외)
             if (e.target === e.currentTarget) close();
           }}
         >
@@ -108,14 +116,12 @@ export default function Showreel() {
               </button>
 
               <div className="aspect-video bg-black">
-                <video
-                  ref={videoRef}
+                <iframe
                   className="w-full h-full"
-                  src={videoSrc}
-                  controls
-                  autoPlay
-                  playsInline
-                  preload="metadata"
+                  src={embedSrc}
+                  title="Showreel 2025"
+                  allow="autoplay; encrypted-media; picture-in-picture"
+                  allowFullScreen
                 />
               </div>
             </div>

@@ -140,7 +140,7 @@ export default function Showreel() {
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
               <h3 className="text-xl md:text-2xl text-white mb-2">Showreel 2025</h3>
               <p className="text-sm md:text-base text-white/80">
-                2분 30초의 대표 작업물 하이라이트
+                48초 프로게임단 VEX 공식 창단 영상
               </p>
             </div>
           </div>

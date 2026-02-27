@@ -12,6 +12,7 @@ export default function Hero() {
                     badge-neon tracking-wide"
         >
           Content Creator &amp; Video Editor
+        </span>
       </div>
 
 

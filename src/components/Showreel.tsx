@@ -2,18 +2,46 @@
 import { useEffect, useMemo, useState } from "react";
 import { Play, X } from "lucide-react";
 
+function getYouTubeId(input: string) {
+  // 이미 ID만 들어오는 경우(11자)
+  if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
+
+  try {
+    const url = new URL(input);
+
+    // youtu.be/VIDEO_ID
+    if (url.hostname.includes("youtu.be")) {
+      const id = url.pathname.split("/").filter(Boolean)[0];
+      return id || null;
+    }
+
+    // youtube.com/watch?v=VIDEO_ID
+    const v = url.searchParams.get("v");
+    if (v) return v;
+
+    // youtube.com/embed/VIDEO_ID
+    const parts = url.pathname.split("/").filter(Boolean);
+    const embedIdx = parts.indexOf("embed");
+    if (embedIdx >= 0 && parts[embedIdx + 1]) return parts[embedIdx + 1];
+
+    return null;
+  } catch {
+    return null;
+  }
+}
+
 export default function Showreel() {
   const [open, setOpen] = useState(false);
 
-  // ✅ 여기만 바꿔라 (유튜브 영상 ID)
-  const YOUTUBE_ID = "https://www.youtube.com/watch?v=mAxPqc8X3Gk";
+  // ✅ 여기엔 링크든 ID든 넣어도 됨
+  const YOUTUBE_INPUT = "https://www.youtube.com/watch?v=mAxPqc8X3Gk";
+  const youtubeId = useMemo(() => getYouTubeId(YOUTUBE_INPUT), [YOUTUBE_INPUT]);
 
   const posterSrc =
     "https://images.unsplash.com/photo-1575320854760-bfffc3550640?auto=format&fit=crop&w=1400&q=80";
 
   const close = () => setOpen(false);
 
-  // ESC로 닫기
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
@@ -22,8 +50,9 @@ export default function Showreel() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  // 유튜브 임베드 URL (autoplay/mute는 정책 이슈 줄이려고 넣음)
   const embedSrc = useMemo(() => {
+    if (!youtubeId) return null;
+
     const params = new URLSearchParams({
       autoplay: "1",
       mute: "1",
@@ -31,8 +60,9 @@ export default function Showreel() {
       playsinline: "1",
       modestbranding: "1",
     });
-    return `https://www.youtube.com/embed/${YOUTUBE_ID}?${params.toString()}`;
-  }, [YOUTUBE_ID]);
+
+    return `https://www.youtube.com/embed/${youtubeId}?${params.toString()}`;
+  }, [youtubeId]);
 
   return (
     <section
@@ -40,7 +70,6 @@ export default function Showreel() {
       className="py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-[#02060a]"
     >
       <div className="max-w-5xl mx-auto">
-        {/* 섹션 타이틀 */}
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-2xl md:text-3xl font-semibold text-cyan-400 neon-text mb-3">
             Showreel
@@ -49,12 +78,16 @@ export default function Showreel() {
           <p className="text-sm md:text-base text-gray-300">My Best Works 2025</p>
         </div>
 
-        {/* 비디오 썸네일 카드 */}
         <button
           type="button"
-          onClick={() => setOpen(true)}
-          className="relative group w-full text-left cursor-pointer"
+          onClick={() => {
+            if (!youtubeId) return;
+            setOpen(true);
+          }}
+          className="relative group w-full text-left cursor-pointer disabled:cursor-not-allowed"
           aria-label="Open showreel video"
+          disabled={!youtubeId}
+          title={!youtubeId ? "유튜브 링크/ID가 올바르지 않음" : undefined}
         >
           <div className="relative aspect-video rounded-2xl overflow-hidden border border-cyan-400/40 bg-black/40 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,255,255,0.35)]">
             <img
@@ -63,11 +96,8 @@ export default function Showreel() {
               className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
               loading="lazy"
             />
-
-            {/* 어두운 그라데이션 */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20" />
 
-            {/* 플레이 버튼 */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-20 h-20 md:w-28 md:h-28 rounded-full bg-cyan-400/90 flex items-center justify-center group-hover:bg-cyan-400 neon-border transition-all duration-300 group-hover:scale-110">
                 <Play
@@ -77,7 +107,6 @@ export default function Showreel() {
               </div>
             </div>
 
-            {/* 제목/설명 */}
             <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
               <h3 className="text-xl md:text-2xl text-white mb-2">Showreel 2025</h3>
               <p className="text-sm md:text-base text-white/80">
@@ -92,20 +121,17 @@ export default function Showreel() {
         </div>
       </div>
 
-      {/* 모달 */}
-      {open && (
+      {open && embedSrc && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
           role="dialog"
           aria-modal="true"
           onMouseDown={(e) => {
-            // 배경 클릭 시 닫기 (플레이어 영역 클릭은 제외)
             if (e.target === e.currentTarget) close();
           }}
         >
           <div className="w-full max-w-5xl">
             <div className="relative rounded-2xl overflow-hidden border border-cyan-400/40 bg-black shadow-[0_0_60px_rgba(0,255,255,0.18)]">
-              {/* 닫기 버튼 */}
               <button
                 type="button"
                 onClick={close}

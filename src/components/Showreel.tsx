@@ -6,7 +6,7 @@ export default function Showreel() {
   const [open, setOpen] = useState(false);
 
   // ✅ 여기만 바꿔라 (유튜브 영상 ID)
-  const YOUTUBE_ID = "YOUR_YOUTUBE_VIDEO_ID";
+  const YOUTUBE_ID = "https://www.youtube.com/watch?v=mAxPqc8X3Gk";
 
   const posterSrc =
     "https://images.unsplash.com/photo-1575320854760-bfffc3550640?auto=format&fit=crop&w=1400&q=80";

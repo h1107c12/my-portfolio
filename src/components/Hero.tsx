@@ -21,7 +21,7 @@ export default function Hero() {
       </h1>
 
       <p className="mt-6 text-gray-300 max-w-2xl mx-auto">
-        트렌디한 편집과 감각적인 모션
+        트렌디한 편집과 감각적인 창작
       </p>
 
       <div className="mt-10 flex gap-4">

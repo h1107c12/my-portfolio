@@ -3,7 +3,7 @@ import reactLogo from "../assets/react.svg";
 export default function Projects() {
   const projectList = [
     {
-      title: "Brand Campaign Video",
+      title: "VEX",
       desc: "브랜드 홍보 영상 편집 및 후반작업",
       tags: ["편집 / 컬러그레이딩"],
       time: "2:30",

@@ -18,13 +18,11 @@ export default function About() {
         <div className="max-w-4xl mx-auto space-y-6 md:space-y-7 text-center text-sm md:text-base leading-relaxed">
           <p>
             안녕하세요.
-            영상 편집과 모션 그래픽으로
-            콘텐츠의 흐름을 설계하는 제작자입니다.
+            콘텐츠의 메시지를 영상과 그래픽으로 
+            시각화하는 제작자입니다.
           </p>
           <p className="text-gray-300">
-            숏폼부터 브랜드 영상까지,
-            트렌드와 스토리를 결합해
-            시청자의 시선을 사로잡는 영상을 만듭니다.
+            숏폼, 하이라이트, 브랜드 영상까지 목적에 맞는 콘텐츠를 기획하고 제작합니다.
           </p>
         </div>
 

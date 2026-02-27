@@ -9,7 +9,7 @@ export default function Header() {
           href="#home"
           className="text-2xl font-semibold text-cyan-400 logo-neon tracking-wide"
         >
-          Portfolio
+          Heon
         </a>
 
         {/* 우측 메뉴 */}

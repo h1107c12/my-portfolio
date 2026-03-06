@@ -67,64 +67,6 @@ export default function Contact() {
             </svg>
           </IconBtn>
 
-          <IconBtn href="https://youtube.com" label="YouTube">
-            {/* youtube */}
-            <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
-              <path
-                d="M20 8.2a3 3 0 0 0-2.1-2.1C16.2 5.7 12 5.7 12 5.7s-4.2 0-5.9.4A3 3 0 0 0 4 8.2a31.6 31.6 0 0 0 0 7.6 3 3 0 0 0 2.1 2.1c1.7.4 5.9.4 5.9.4s4.2 0 5.9-.4A3 3 0 0 0 20 15.8a31.6 31.6 0 0 0 0-7.6Z"
-                stroke="currentColor"
-                strokeWidth="1.6"
-              />
-              <path
-                d="M10.6 9.5v5l4.4-2.5-4.4-2.5Z"
-                fill="currentColor"
-              />
-            </svg>
-          </IconBtn>
-
-          <IconBtn href="https://github.com" label="GitHub">
-            {/* github */}
-            <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
-              <path
-                d="M12 3.5a8.5 8.5 0 0 0-2.7 16.6c.4.1.6-.2.6-.4v-1.4c-2.3.5-2.8-1-2.8-1-.4-1-.9-1.3-.9-1.3-.8-.5.1-.5.1-.5.9.1 1.4.9 1.4.9.8 1.4 2.1 1 2.6.8.1-.6.3-1 .6-1.2-1.8-.2-3.7-.9-3.7-4a3.1 3.1 0 0 1 .8-2.2c-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.6 7.6 0 0 1 4 0c1.5-1 2.2-.8 2.2-.8.5 1.1.2 1.9.1 2.1a3.1 3.1 0 0 1 .8 2.2c0 3.1-1.9 3.8-3.7 4 .3.2.6.8.6 1.6v2.3c0 .2.2.5.6.4A8.5 8.5 0 0 0 12 3.5Z"
-                fill="currentColor"
-                opacity=".9"
-              />
-            </svg>
-          </IconBtn>
-
-          <IconBtn href="https://linkedin.com" label="LinkedIn">
-            {/* linkedin */}
-            <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
-              <path
-                d="M6.5 9.5V19"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-              <path
-                d="M6.5 6.8h0"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-              <path
-                d="M10.5 19v-5.4c0-1.6.9-2.6 2.3-2.6 1.4 0 2.2 1 2.2 2.6V19"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-              />
-              <path
-                d="M10.5 9.5V19"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                opacity=".75"
-              />
-            </svg>
-          </IconBtn>
-        </div>
-
         {/* CTA button */}
         <div className="mt-14">
           <a

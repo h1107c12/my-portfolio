@@ -3,14 +3,14 @@ import reactLogo from "../assets/react.svg";
 export default function Projects() {
   const projectList = [
     {
-      title: "VEX",
+      title: "VEX 프로게임단 공식 창단",
       desc: "브랜드 홍보 영상 편집 및 후반작업",
-      tags: ["편집 / 컬러그레이딩"],
-      time: "2:30",
-      thumb: reactLogo,
+      tags: ["메인편집 / 서브편집"],
+      time: "0:48",
+      youtubeId: "https://www.youtube.com/watch?v=lvD-m5AiY0s",
     },
     {
-      title: "Cinematic Short Film",
+      title: "VEX 클랜컵",
       desc: "단편 영화 편집 및 사운드 믹싱",
       tags: ["편집 / 사운드 디자인"],
       time: "5:15",
@@ -18,7 +18,7 @@ export default function Projects() {
     },
     {
       title: "Motion Graphics Intro",
-      desc: "After Effects 모션 그래픽 제작",
+      desc: "After Effects 모션 그래픽 제작", 
       tags: ["모션 그래픽"],
       time: "0:45",
       thumb: reactLogo,

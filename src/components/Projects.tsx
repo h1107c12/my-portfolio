@@ -1,48 +1,46 @@
-import reactLogo from "../assets/react.svg";
-
 export default function Projects() {
   const projectList = [
     {
       title: "VEX 프로게임단 공식 창단",
       desc: "브랜드 홍보 영상 편집 및 후반작업",
-      tags: ["메인편집 / 서브편집"],
+      tags: ["Lead Editor / Additional Editing / Content Planning"],
       time: "0:48",
-      youtubeId: "https://www.youtube.com/watch?v=lvD-m5AiY0s",
+      youtubeId: "lvD-m5AiY0s",
     },
     {
       title: "VEX 클랜컵",
       desc: "단편 영화 편집 및 사운드 믹싱",
       tags: ["편집 / 사운드 디자인"],
       time: "5:15",
-      thumb: reactLogo,
+      youtubeId: "lvD-m5AiY0s",
     },
     {
       title: "Motion Graphics Intro",
-      desc: "After Effects 모션 그래픽 제작", 
+      desc: "After Effects 모션 그래픽 제작",
       tags: ["모션 그래픽"],
       time: "0:45",
-      thumb: reactLogo,
+      youtubeId: "lvD-m5AiY0s",
     },
     {
       title: "YouTube Shorts Series",
       desc: "쇼츠 영상 시리즈 편집 및 썸네일",
       tags: ["편집 / 썸네일 디자인"],
       time: "0:59",
-      thumb: reactLogo,
+      youtubeId: "lvD-m5AiY0s",
     },
     {
       title: "Product Launch Video",
       desc: "제품 출시 홍보 영상 편집 및 시각효과",
       tags: ["편집 / VFX"],
       time: "1:30",
-      thumb: reactLogo,
+      youtubeId: "lvD-m5AiY0s",
     },
     {
       title: "Documentary Highlight",
       desc: "다큐멘터리 하이라이트 영상 편집",
       tags: ["편집 / 스토리텔링"],
       time: "3:45",
-      thumb: reactLogo,
+      youtubeId: "lvD-m5AiY0s",
     },
   ];
 
@@ -64,11 +62,12 @@ export default function Projects() {
           >
             {/* 썸네일 영역 */}
             <div className="relative overflow-hidden group h-44 bg-black">
-              {/* 썸네일 */}
+
+              {/* 유튜브 썸네일 */}
               <img
-                src={p.thumb}
+                src={`https://img.youtube.com/vi/${p.youtubeId}/maxresdefault.jpg`}
                 alt={p.title}
-                className="w-full h-full object-contain transition-transform duration-500 
+                className="w-full h-full object-cover transition-transform duration-500 
                            group-hover:scale-[1.08]"
               />
 
@@ -130,7 +129,7 @@ export default function Projects() {
                 </span>
               </div>
 
-              {/* 영상 설명 (태그 밑으로 이동 완료) */}
+              {/* 설명 */}
               <p className="text-gray-300 mt-1 text-sm">{p.desc}</p>
             </div>
           </div>

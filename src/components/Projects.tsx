@@ -13,35 +13,7 @@ export default function Projects() {
       tags: ["메인편집 / 서브편집"],
       time: "2:56",
       youtubeId: "lvD-m5AiY0s",
-    },
-    {
-      title: "Motion Graphics Intro",
-      desc: "After Effects 모션 그래픽 제작",
-      tags: ["모션 그래픽"],
-      time: "0:45",
-      youtubeId: "lvD-m5AiY0s",
-    },
-    {
-      title: "YouTube Shorts Series",
-      desc: "쇼츠 영상 시리즈 편집 및 썸네일",
-      tags: ["편집 / 썸네일 디자인"],
-      time: "0:59",
-      youtubeId: "lvD-m5AiY0s",
-    },
-    {
-      title: "Product Launch Video",
-      desc: "제품 출시 홍보 영상 편집 및 시각효과",
-      tags: ["편집 / VFX"],
-      time: "1:30",
-      youtubeId: "lvD-m5AiY0s",
-    },
-    {
-      title: "Documentary Highlight",
-      desc: "다큐멘터리 하이라이트 영상 편집",
-      tags: ["편집 / 스토리텔링"],
-      time: "3:45",
-      youtubeId: "lvD-m5AiY0s",
-    },
+    }
   ];
 
   return (

@@ -26,14 +26,6 @@ export default function Contact() {
           Let&apos;s Create Together
         </p>
 
-        <div className="mx-auto mb-6 h-[2px] w-20 bg-cyan-400/70 neon-line" />
-
-        <p className="leading-relaxed text-gray-300">
-          영상 편집 작업 문의를 환영합니다!
-          <br />
-          함께 멋진 콘텐츠를 만들어보아요!
-        </p>
-
         {/* icons */}
         <div className="mt-10 flex items-center justify-center gap-6">
           <IconBtn href="mailto:hello@editor.com" label="Email">
@@ -88,7 +80,7 @@ export default function Contact() {
                 opacity=".9"
               />
             </svg>
-            작업 문의하기
+            문의하기
           </a>
         </div>
       </div>

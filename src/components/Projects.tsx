@@ -14,6 +14,13 @@ export default function Projects() {
       time: "2:56",
       youtubeId: "lvD-m5AiY0s",
     }
+    {
+      title: "VEX 로스터 소개 영상",
+      desc: "구단 로스터 소개",
+      tags: ["메인편집 / 서브편집"],
+      time: "3:50",
+      youtubeId: "lvD-m5AiY0s",
+    }
   ];
 
   return (

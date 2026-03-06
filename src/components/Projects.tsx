@@ -2,14 +2,14 @@ export default function Projects() {
   const projectList = [
     {
       title: "VEX 프로게임단 공식 창단",
-      desc: "브랜드 홍보 영상 편집 및 후반작업",
+      desc: "구단 홍보 영상",
       tags: ["메인편집/ 서브편집"],
       time: "0:48",
       youtubeId: "mAxPqc8X3Gk",
     },
     {
       title: "VEX 클랜컵",
-      desc: "단편 영화 편집 및 사운드 믹싱",
+      desc: "구단 클랜 홍보",
       tags: ["메인편집 / 서브편집"],
       time: "2:56",
       youtubeId: "lvD-m5AiY0s",

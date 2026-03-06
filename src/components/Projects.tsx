@@ -3,7 +3,7 @@ export default function Projects() {
     {
       title: "VEX 프로게임단 공식 창단",
       desc: "구단 홍보 영상",
-      tags: ["메인편집/ 서브편집"],
+      tags: ["메인편집 / 서브편집"],
       time: "0:48",
       youtubeId: "mAxPqc8X3Gk",
     },

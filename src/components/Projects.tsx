@@ -3,15 +3,15 @@ export default function Projects() {
     {
       title: "VEX 프로게임단 공식 창단",
       desc: "브랜드 홍보 영상 편집 및 후반작업",
-      tags: ["Lead Editor / Additional Editing / Content Planning"],
+      tags: ["메인편집/ 서브편집"],
       time: "0:48",
-      youtubeId: "lvD-m5AiY0s",
+      youtubeId: "mAxPqc8X3Gk",
     },
     {
       title: "VEX 클랜컵",
       desc: "단편 영화 편집 및 사운드 믹싱",
-      tags: ["편집 / 사운드 디자인"],
-      time: "5:15",
+      tags: ["메인편집 / 서브편집"],
+      time: "2:56",
       youtubeId: "lvD-m5AiY0s",
     },
     {

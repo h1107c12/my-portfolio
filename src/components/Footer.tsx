@@ -7,7 +7,7 @@ export default function Footer() {
         </p>
 
         <p className="text-gray-400 text-sm">
-          © 2024 All rights reserved. Made with passion for storytelling.
+          © 2025 All rights reserved.
         </p>
       </div>
     </footer>

@@ -28,7 +28,7 @@ export default function Contact() {
 
         {/* icons */}
         <div className="mt-10 flex items-center justify-center gap-6">
-          <IconBtn href="mailto:hello@editor.com" label="Email">
+          <IconBtn href="mailto:h1107c12@gmail.com" label="Email">
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none">
               <path
                 d="M4.5 7.5h15v9a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-9Z"
@@ -44,7 +44,7 @@ export default function Contact() {
             </svg>
           </IconBtn>
 
-          <IconBtn href="https://instagram.com" label="Instagram">
+          <IconBtn href="https://www.instagram.com/innocent_heon/" label="Instagram">
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none">
               <path
                 d="M7.5 3.8h9A3.7 3.7 0 0 1 20.2 7.5v9a3.7 3.7 0 0 1-3.7 3.7h-9A3.7 3.7 0 0 1 3.8 16.5v-9A3.7 3.7 0 0 1 7.5 3.8Z"
@@ -64,7 +64,7 @@ export default function Contact() {
         {/* CTA button */}
         <div className="mt-14">
           <a
-            href="mailto:hello@editor.com"
+            href="mailto:h1107c12@gmail.com"
             className="inline-flex items-center gap-3 rounded-2xl bg-cyan-400 px-12 py-5 font-semibold text-black transition hover:bg-cyan-300 shadow-[0_12px_45px_rgba(34,211,238,0.28)]"
           >
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none">

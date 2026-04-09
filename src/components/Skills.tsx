@@ -2,7 +2,7 @@ export default function Skills() {
   const skills = [
     {
       title: "Premiere Pro",
-      desc: "전문적인 영상 편집 및 컷 편집",
+      desc: "영상 편집 및 컷 편집",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path
@@ -27,7 +27,7 @@ export default function Skills() {
     },
     {
       title: "After Effects",
-      desc: "모션 그래픽, VFX, 타이틀 애니메이션 제작",
+      desc: "간단한 모션 그래픽, VFX, 타이틀 애니메이션 제작",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path

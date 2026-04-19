@@ -6,10 +6,13 @@ type ProjectItem = {
   desc: string;
   tags: string[];
   time: string;
-  youtubeId: string;
+  youtubeId?: string;
+  driveUrl?: string;
 };
 
 function getYouTubeId(input: string) {
+  if (!input) return null;
+
   // ID만 들어오는 경우(11자)
   if (/^[a-zA-Z0-9_-]{11}$/.test(input)) return input;
 
@@ -60,6 +63,14 @@ export default function Projects() {
       time: "3:26",
       youtubeId: "FVvfB32RsAM",
     },
+    {
+      title: "VEX 오븐마루 컨텐츠",
+      desc: "스폰서 컨텐츠 영상",
+      tags: ["메인편집 / 서브편집"],
+      time: "16:01",
+      driveUrl:
+        "https://drive.google.com/file/d/1Rx8I2JrL_B8pioxyCiiwhvisTDRxe51r/preview",
+    },
   ];
 
   const [open, setOpen] = useState(false);
@@ -71,7 +82,15 @@ export default function Projects() {
   };
 
   const openProject = (project: ProjectItem) => {
-    const validId = getYouTubeId(project.youtubeId);
+    // 드라이브 영상이면 바로 열기
+    if (project.driveUrl) {
+      setSelectedProject(project);
+      setOpen(true);
+      return;
+    }
+
+    // 유튜브 영상 처리
+    const validId = getYouTubeId(project.youtubeId || "");
     if (!validId) return;
 
     setSelectedProject({
@@ -95,7 +114,15 @@ export default function Projects() {
   }, [open]);
 
   const embedSrc = useMemo(() => {
-    if (!selectedProject?.youtubeId) return null;
+    if (!selectedProject) return null;
+
+    // 드라이브 우선
+    if (selectedProject.driveUrl) {
+      return selectedProject.driveUrl;
+    }
+
+    // 유튜브
+    if (!selectedProject.youtubeId) return null;
 
     const params = new URLSearchParams({
       autoplay: "1",
@@ -110,19 +137,17 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-32 text-center max-w-7xl mx-auto px-6">
-      {/* Section Title */}
       <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 neon-text mb-3">
         Featured Projects
       </h2>
       <p className="text-gray-300 mb-12">최근 작업한 영상 프로젝트들</p>
 
-      {/* Cards Grid */}
       <div className="grid md:grid-cols-3 gap-10">
         {projectList.map((p, i) => {
-          const youtubeId = getYouTubeId(p.youtubeId);
+          const youtubeId = p.youtubeId ? getYouTubeId(p.youtubeId) : null;
           const thumbSrc = youtubeId
             ? `https://img.youtube.com/vi/${youtubeId}/maxresdefault.jpg`
-            : "";
+            : "/images/ovenmaru-thumb.jpg"; // 드라이브 영상용 썸네일 직접 넣기
 
           return (
             <button
@@ -134,7 +159,6 @@ export default function Projects() {
                          cursor-pointer group"
               aria-label={`${p.title} 영상 열기`}
             >
-              {/* 썸네일 영역 */}
               <div className="relative overflow-hidden h-44 bg-black">
                 <img
                   src={thumbSrc}
@@ -147,10 +171,8 @@ export default function Projects() {
                   }}
                 />
 
-                {/* Hover 어둡게 */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300" />
 
-                {/* Play Button */}
                 <div
                   className="
                     absolute inset-0 flex items-center justify-center
@@ -168,13 +190,11 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* 텍스트 영역 */}
               <div className="p-6 text-left">
                 <h3 className="text-xl font-bold text-cyan-300 neon-text mb-1">
                   {p.title}
                 </h3>
 
-                {/* 태그 */}
                 <div className="flex flex-wrap gap-2 mb-3">
                   {p.tags.map((tag, idx) => (
                     <span
@@ -186,15 +206,11 @@ export default function Projects() {
                     </span>
                   ))}
 
-                  {/* Time */}
-                  <span
-                    className="px-3 py-1 bg-gray-800/40 text-gray-300 text-xs rounded-full flex items-center gap-1"
-                  >
+                  <span className="px-3 py-1 bg-gray-800/40 text-gray-300 text-xs rounded-full flex items-center gap-1">
                     ⏱ {p.time}
                   </span>
                 </div>
 
-                {/* 설명 */}
                 <p className="text-gray-300 mt-1 text-sm">{p.desc}</p>
               </div>
             </button>
@@ -202,7 +218,6 @@ export default function Projects() {
         })}
       </div>
 
-      {/* 모달 */}
       {open && embedSrc && selectedProject && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
@@ -214,7 +229,6 @@ export default function Projects() {
         >
           <div className="w-full max-w-5xl">
             <div className="relative rounded-2xl overflow-hidden border border-cyan-400/40 bg-black shadow-[0_0_60px_rgba(0,255,255,0.18)]">
-              {/* 닫기 버튼 */}
               <button
                 type="button"
                 onClick={close}

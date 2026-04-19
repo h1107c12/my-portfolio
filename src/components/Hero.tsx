@@ -26,15 +26,6 @@ export default function Hero() {
 
       <div className="mt-10 flex gap-4">
         <a
-          href="#reel"
-          className="px-6 py-3 bg-cyan-500 text-black font-bold rounded-md flex items-center gap-2 hover:bg-cyan-400 transition"
-        >
-          <span className="text-lg">▶</span>
-          Watch My Reel
-        </a>
-
-
-        <a
           href="#contact"
           className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-md hover:bg-cyan-400 hover:text-black transition"
         >

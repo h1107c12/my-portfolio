@@ -1,6 +1,5 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Showreel from "./components/Showreel";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Experience from "./components/Experience";
@@ -16,7 +15,6 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <Showreel />
         <Projects />
         <Experience />
         <Skills />

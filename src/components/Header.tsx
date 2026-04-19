@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navItems = ["Home", "About", "Reel", "Projects", "Experience", "Contact"];
+  const navItems = ["Home", "About", "Projects", "Experience", "Contact"];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-30 border-b border-cyan-500/10 bg-black/80 backdrop-blur-sm">

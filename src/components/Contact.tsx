@@ -44,7 +44,7 @@ export default function Contact() {
             </svg>
           </IconBtn>
 
-          <IconBtn href="https://www.instagram.com/innocent_heon/" label="Instagram">
+          <IconBtn href="https://www.instagram.com/jae_ddeok/" label="Instagram">
             <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none">
               <path
                 d="M7.5 3.8h9A3.7 3.7 0 0 1 20.2 7.5v9a3.7 3.7 0 0 1-3.7 3.7h-9A3.7 3.7 0 0 1 3.8 16.5v-9A3.7 3.7 0 0 1 7.5 3.8Z"

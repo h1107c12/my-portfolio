@@ -43,13 +43,6 @@ function getYouTubeId(input: string) {
 export default function Projects() {
   const projectList: ProjectItem[] = [
     {
-      title: "VEX 프로게임단 공식 창단",
-      desc: "구단 홍보 영상",
-      tags: ["메인편집 / 서브편집"],
-      time: "0:48",
-      youtubeId: "BlB5Ns1i-UE",
-    },
-    {
       title: "VEX 클랜컵",
       desc: "구단 클랜 홍보",
       tags: ["메인편집 / 서브편집"],
@@ -69,6 +62,13 @@ export default function Projects() {
       tags: ["메인편집 / 서브편집"],
       time: "16:01",
       youtubeId: "https://www.youtube.com/watch?v=TV_-0JGcNCY&t=400s",
+    },
+    {
+      title: "Vex 로스터 소개 하이라이트 숏폼",
+      desc: "구단 로스터 소개",
+      tags: ["메인편집"],
+      time: "16:01",
+      youtubeId: "vo_cAE0P2ew",
     },
     {
       title: "개인 유튜브 '재뜩' 숏폼",

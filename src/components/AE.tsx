@@ -53,11 +53,11 @@ const motionVideos: MotionItem[] = [
     url: "https://youtu.be/RcnSADNDSSk",
   },
   {
-    title: "Logo Motion",
-    desc: "브랜드 로고 애니메이션",
-    tags: ["로고 모션", "브랜딩"],
-    time: "0:20",
-    url: "https://www.youtube.com/watch?v=XXXXXXX",
+      title: "VEX 프로게임단 공식 창단",
+      desc: "구단 홍보 영상",
+      tags: ["메인편집 / 서브편집"],
+      time: "0:48",
+      url: "BlB5Ns1i-UE",
   },
 ];
 
@@ -108,80 +108,92 @@ export default function MotionGraphic() {
   }, [selectedVideo]);
 
   return (
-    <section id="ae" className="py-24 px-6 bg-black">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 drop-shadow-[0_0_18px_#22d3ee]">
-            Adobe After Effects
-          </h2>
-          <p className="text-gray-300 mt-4">
-            애프터 이펙트를 활용한 영상작업물
-          </p>
-        </div>
+    <section id="ae" className="py-32 text-center max-w-7xl mx-auto px-6">
+      <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 neon-text mb-3">
+        Adobe After Effects
+      </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {motionVideos.map((item, index) => {
-            const videoId = getYoutubeId(item.url);
-            const thumbSrc = videoId
-              ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
-              : "";
+      <p className="text-gray-300 mb-12">
+        애프터 이펙트를 활용한 영상작업물
+      </p>
 
-            return (
-              <button
-                type="button"
-                key={index}
-                onClick={() => openVideo(item)}
-                className="group bg-black border border-cyan-900/70 rounded-xl overflow-hidden hover:border-cyan-400 hover:scale-[1.02] transition shadow-[0_0_20px_rgba(34,211,238,0.08)] text-left"
-                aria-label={`${item.title} 영상 열기`}
-              >
-                <div className="relative aspect-video overflow-hidden bg-black">
-                  {videoId && (
-                    <img
-                      src={thumbSrc}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.08]"
-                      onError={(e) => {
-                        e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-                      }}
+      <div className="grid md:grid-cols-3 gap-10">
+        {motionVideos.map((item, index) => {
+          const videoId = getYoutubeId(item.url);
+          const thumbSrc = videoId
+            ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+            : "";
+
+          return (
+            <button
+              type="button"
+              key={index}
+              onClick={() => openVideo(item)}
+              className="bg-black/30 border border-cyan-400/20 rounded-xl overflow-hidden 
+                         shadow-lg hover:shadow-cyan-400/40 transition duration-300 text-left
+                         cursor-pointer group"
+              aria-label={`${item.title} 영상 열기`}
+            >
+              <div className="relative aspect-video overflow-hidden bg-black">
+                {videoId && (
+                  <img
+                    src={thumbSrc}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-500 
+                               group-hover:scale-[1.08]"
+                    onError={(e) => {
+                      e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                    }}
+                  />
+                )}
+
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300" />
+
+                <div
+                  className="absolute inset-0 flex items-center justify-center
+                             opacity-0 group-hover:opacity-100
+                             transition-all duration-300 ease-out"
+                >
+                  <div
+                    className="w-14 h-14 rounded-full bg-cyan-400/90
+                               shadow-[0_0_18px_rgba(34,211,238,0.85)]
+                               flex items-center justify-center"
+                  >
+                    <Play
+                      className="w-7 h-7 text-black ml-[2px]"
+                      fill="currentColor"
                     />
-                  )}
-
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition duration-300" />
-
-                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="w-14 h-14 rounded-full bg-cyan-400/90 shadow-[0_0_18px_rgba(34,211,238,0.85)] flex items-center justify-center">
-                      <Play className="w-7 h-7 text-black ml-[2px]" fill="currentColor" />
-                    </div>
                   </div>
                 </div>
+              </div>
 
-                <div className="p-5">
-                  <h3 className="text-xl font-bold text-cyan-300 mb-3">
-                    {item.title}
-                  </h3>
+              <div className="p-6 text-left">
+                <h3 className="text-xl font-bold text-cyan-300 neon-text mb-1">
+                  {item.title}
+                </h3>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {item.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="text-xs px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300 border border-cyan-400/30"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-
-                    <span className="text-xs px-3 py-1 rounded-full bg-zinc-900 text-gray-300 flex items-center gap-1">
-                      <Clock size={12} />
-                      {item.time}
+                <div className="flex flex-wrap gap-2 mb-3">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-3 py-1 bg-cyan-400/10 border border-cyan-400/20 
+                                 text-cyan-300 text-xs rounded-full"
+                    >
+                      {tag}
                     </span>
-                  </div>
+                  ))}
 
-                  <p className="text-sm text-gray-300">{item.desc}</p>
+                  <span className="px-3 py-1 bg-gray-800/40 text-gray-300 text-xs rounded-full flex items-center gap-1">
+                    <Clock size={12} />
+                    {item.time}
+                  </span>
                 </div>
-              </button>
-            );
-          })}
-        </div>
+
+                <p className="text-gray-300 mt-1 text-sm">{item.desc}</p>
+              </div>
+            </button>
+          );
+        })}
       </div>
 
       {open && embedSrc && selectedVideo && (

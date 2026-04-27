@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Play, X } from "lucide-react";
+import { Play } from "lucide-react";
 
 type ProjectItem = {
   title: string;
@@ -47,7 +47,7 @@ export default function Projects() {
       desc: "구단 홍보 영상",
       tags: ["메인편집 / 서브편집"],
       time: "0:48",
-      youtubeId: "mAxPqc8X3Gk",
+      youtubeId: "BlB5Ns1i-UE",
     },
     {
       title: "VEX 클랜컵",
@@ -68,8 +68,15 @@ export default function Projects() {
       desc: "스폰서 컨텐츠 영상",
       tags: ["메인편집 / 서브편집"],
       time: "16:01",
-      driveUrl:
-        "https://drive.google.com/file/d/1Rx8I2JrL_B8pioxyCiiwhvisTDRxe51r/preview",
+      youtubeId: "https://www.youtube.com/watch?v=TV_-0JGcNCY&t=400s",
+    },
+    {
+      title: "개인 유튜브 '재뜩' 숏폼",
+      desc: "배틀그라운드 콘텐츠",
+      tags: ["메인편집"],
+      time: "0:55",
+      youtubeId:
+        "UWCkwuqF7n4",
     },
   ];
 
@@ -126,7 +133,7 @@ export default function Projects() {
 
     const params = new URLSearchParams({
       autoplay: "1",
-      mute: "1",
+      mute: "0",
       rel: "0",
       playsinline: "1",
       modestbranding: "1",
@@ -136,11 +143,11 @@ export default function Projects() {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="py-32 text-center max-w-7xl mx-auto px-6">
+    <section id="pr" className="py-32 text-center max-w-7xl mx-auto px-6">
       <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 neon-text mb-3">
-        Featured Projects
+        Adobe Premiere Pro
       </h2>
-      <p className="text-gray-300 mb-12">최근 작업한 영상 프로젝트들</p>
+      <p className="text-gray-300 mb-12">프리미어 프로를 활용한 영상작업물</p>
 
       <div className="grid md:grid-cols-3 gap-10">
         {projectList.map((p, i) => {
@@ -159,7 +166,7 @@ export default function Projects() {
                          cursor-pointer group"
               aria-label={`${p.title} 영상 열기`}
             >
-              <div className="relative overflow-hidden h-44 bg-black">
+              <div className="relative aspect-video overflow-hidden bg-black">
                 <img
                   src={thumbSrc}
                   alt={p.title}
@@ -229,15 +236,6 @@ export default function Projects() {
         >
           <div className="w-full max-w-5xl">
             <div className="relative rounded-2xl overflow-hidden border border-cyan-400/40 bg-black shadow-[0_0_60px_rgba(0,255,255,0.18)]">
-              <button
-                type="button"
-                onClick={close}
-                className="absolute top-3 right-3 z-10 p-2 rounded-full bg-black/60 border border-cyan-400/30 hover:border-cyan-400/70 hover:shadow-[0_0_20px_rgba(0,255,255,0.25)] transition"
-                aria-label="Close"
-              >
-                <X className="w-5 h-5 text-cyan-200" />
-              </button>
-
               <div className="aspect-video bg-black">
                 <iframe
                   className="w-full h-full"

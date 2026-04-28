@@ -253,9 +253,6 @@ export default function PS() {
                   </div>
 
                   <p className="text-sm text-gray-300">{project.desc}</p>
-                  <p className="mt-2 text-xs text-cyan-300/60">
-                    클릭해서 작업물 보기
-                  </p>
                 </div>
               </button>
             ))}

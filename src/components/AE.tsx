@@ -145,7 +145,7 @@ export default function AE() {
                   />
                 )}
 
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition duration-150 ease-out" />
+                <div className="absolute inset-0 bg-black/0 transition duration-150 ease-out" />
 
                 <div
                   className="absolute inset-0 flex items-center justify-center

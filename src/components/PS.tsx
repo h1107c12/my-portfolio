@@ -107,11 +107,12 @@ export default function PS() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
-    const handleEsc = (e: KeyboardEvent) => {
+    const esc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setSelectedImage(null);
     };
-    window.addEventListener("keydown", handleEsc);
-    return () => window.removeEventListener("keydown", handleEsc);
+
+    window.addEventListener("keydown", esc);
+    return () => window.removeEventListener("keydown", esc);
   }, []);
 
   const card =
@@ -128,19 +129,29 @@ export default function PS() {
       {!selectedProject ? (
         <div className="columns-1 md:columns-3 gap-10">
           {psProjects.map((project, i) => (
-            <div key={i} onClick={() => setSelectedProject(project)} className={card}>
-              
-              {/* 이미지 영역 */}
-              <div className="w-full bg-black flex items-center justify-center p-3">
+            <div
+              key={i}
+              onClick={() => setSelectedProject(project)}
+              className={card}
+            >
+              <div className="relative w-full bg-black flex items-center justify-center p-3 overflow-hidden">
                 <img
                   src={project.cover}
                   alt={project.title}
-                  className="block w-full max-h-[260px] object-contain mx-auto
-                             transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="block w-full max-h-[260px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.04]"
                 />
+
+                {project.images.length > 1 && (
+                  <div
+                    className="absolute bottom-3 right-3 px-3 py-1 rounded-full
+                               bg-black/70 border border-cyan-400/30
+                               text-cyan-300 text-xs backdrop-blur-sm"
+                  >
+                    +{project.images.length}
+                  </div>
+                )}
               </div>
 
-              {/* 텍스트 */}
               <div className="p-5 text-left">
                 <h3 className="text-xl font-bold text-cyan-300 neon-text mb-2">
                   {project.title}
@@ -158,6 +169,9 @@ export default function PS() {
                 </div>
 
                 <p className="text-gray-300 text-sm">{project.desc}</p>
+                <p className="text-cyan-300/60 text-xs mt-2">
+                  클릭해서 작업물 보기
+                </p>
               </div>
             </div>
           ))}
@@ -181,14 +195,16 @@ export default function PS() {
 
           <div className="columns-1 md:columns-3 gap-10">
             {selectedProject.images.map((item, i) => (
-              <div key={i} onClick={() => setSelectedImage(item.image)} className={card}>
-                
+              <div
+                key={i}
+                onClick={() => setSelectedImage(item.image)}
+                className={card}
+              >
                 <div className="w-full bg-black flex items-center justify-center p-3">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="block w-full max-h-[260px] object-contain mx-auto
-                               transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="block w-full max-h-[260px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 </div>
 

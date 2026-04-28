@@ -11,21 +11,25 @@ import PS from "./components/PS";
 
 export default function App() {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <Header />
+    <div className="relative min-h-screen overflow-hidden bg-black text-white">
+      <div className="pointer-events-none fixed inset-0 z-0 bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.08),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(34,211,238,0.06),transparent_30%)]" />
 
-      <main>
-        <Hero />
-        <About />
-        <PR />
-        <AE />
-        <PS />
-        <Experience />
-        <Skills />
-        <Contact />
-      </main>
+      <div className="relative z-10">
+        <Header />
 
-      <Footer />
+        <main>
+          <Hero />
+          <About />
+          <PR />
+          <AE />
+          <PS />
+          <Experience />
+          <Skills />
+          <Contact />
+        </main>
+
+        <Footer />
+      </div>
     </div>
   );
 }

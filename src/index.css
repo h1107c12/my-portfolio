@@ -3,22 +3,24 @@
 @import "tailwindcss/utilities";
 
 * {
-  font-family: Pretendard, sans-serif;
-}
-
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Pretendard, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   @apply bg-black text-white font-sans;
   overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 90px;
 }
 
 ::selection {
@@ -29,15 +31,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #0ea5e9;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: #000;
 }
 
-/* 좌측 상단 로고 네온 효과 */
 .logo-neon {
   text-shadow:
     0 0 4px rgba(0, 255, 255, 0.85),
@@ -45,7 +48,6 @@ body {
     0 0 22px rgba(0, 255, 255, 0.45);
 }
 
-/* Hero 뱃지 네온 효과 */
 .badge-neon {
   box-shadow:
     0 0 10px rgba(0, 255, 255, 0.35),
@@ -57,7 +59,7 @@ body {
     text-shadow:
       0 0 20px rgba(0, 255, 255, 1),
       0 0 80px rgba(0, 255, 255, 0.12),
-      0 0 120px rgba(0, 255, 255, 0.10) !important;
+      0 0 120px rgba(0, 255, 255, 0.1) !important;
   }
 
   .neon-strong {
@@ -73,19 +75,14 @@ body {
       0 0 10px rgba(0, 255, 255, 0.15);
   }
 
-  /* Skills에서 쓰던 soft 버전(없어서 추가) */
   .neon-border-soft {
     box-shadow:
       0 0 10px rgba(34, 211, 238, 0.12),
       0 0 22px rgba(34, 211, 238, 0.08);
   }
 
-  /* =========================
-     ✅ 공용 Hover 카드 효과
-     (Skills / Experience 공통)
-     ========================= */
   .neon-card {
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.03);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
     transition:
@@ -102,11 +99,10 @@ body {
     background: rgba(255, 255, 255, 0.04);
     box-shadow:
       0 0 0 1px rgba(34, 211, 238, 0.18),
-      0 14px 44px rgba(0, 0, 0, 0.60),
+      0 14px 44px rgba(0, 0, 0, 0.6),
       0 0 26px rgba(34, 211, 238, 0.16);
   }
 
-  /* 아이콘 박스도 호버 시 살짝 살아나게 */
   .neon-icon {
     transition:
       transform 260ms ease,
@@ -124,7 +120,6 @@ body {
       0 0 22px rgba(34, 211, 238, 0.16);
   }
 
-  /* Experience 타임라인 아이콘(동그라미)도 호버 시 강조 */
   .timeline-dot {
     transition:
       transform 260ms ease,
@@ -137,7 +132,7 @@ body {
     transform: scale(1.06);
     border-color: rgba(34, 211, 238, 0.85);
     box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.20),
+      0 0 0 1px rgba(34, 211, 238, 0.2),
       0 0 26px rgba(34, 211, 238, 0.22);
   }
 }

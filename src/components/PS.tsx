@@ -30,7 +30,7 @@ export default function PS() {
     desc: "클릭 유도형 콘텐츠 썸네일 디자인",
     tags: ["썸네일", "콘텐츠"],
     cover: "/images/ps/thumbnail/cover.png",
-    images: Array.from({ length: 3 }, (_, i) => ({
+    images: Array.from({ length: 4 }, (_, i) => ({
       title: `썸네일 작업 ${String(i + 1).padStart(2, "0")}`,
       image: `/images/ps/thumbnail/ps${i + 1}.png`,
     })),

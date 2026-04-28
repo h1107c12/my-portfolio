@@ -195,7 +195,7 @@ export default function PS() {
   return (
     <section
       id="ps"
-      className="scroll-mt-24 py-32 text-center max-w-7xl mx-auto px-6"
+      className="scroll-mt-24 py-24 md:py-32 text-center max-w-7xl mx-auto px-5 md:px-6"
     >
       <h2 className="text-4xl md:text-5xl font-bold text-cyan-400 neon-text mb-3">
         Adobe Photoshop
@@ -268,20 +268,20 @@ export default function PS() {
         >
           {selectedProject && (
             <>
-              <div className="mb-10 flex items-center justify-between">
+              <div className="mb-10 flex flex-col items-center justify-center gap-5 md:flex-row md:justify-between">
                 <button
                   type="button"
                   onClick={() => setSelectedProject(null)}
-                  className="rounded-full border border-cyan-400/30 px-4 py-2 text-cyan-300 transition duration-150 hover:bg-cyan-400/10"
+                  className="order-2 md:order-1 rounded-full border border-cyan-400/30 px-4 py-2 text-sm md:text-base text-cyan-300 transition duration-150 hover:bg-cyan-400/10"
                 >
                   ← 폴더 목록
                 </button>
 
-                <h3 className="text-2xl font-bold text-cyan-300 neon-text">
+                <h3 className="order-1 md:order-2 max-w-full break-keep text-center text-2xl md:text-2xl font-bold leading-snug text-cyan-300 neon-text">
                   {selectedProject.title}
                 </h3>
 
-                <div className="w-[92px]" />
+                <div className="hidden md:order-3 md:block md:w-[92px]" />
               </div>
 
               <div className="columns-1 md:columns-3 gap-10">

@@ -25,8 +25,14 @@ export default function PS() {
         { title: "VEX 유니폼 저지 뒤", image: "/images/ps/branding/ps2.png" },
         { title: "VEX 유니폼 앞", image: "/images/ps/branding/ps3.png" },
         { title: "VEX 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
-        { title: "VEX 로고 비주얼 스타일 확장 1", image: "/images/ps/branding/ps5.png" },
-        { title: "VEX 로고 비주얼 스타일 확장 2", image: "/images/ps/branding/ps6.png" },
+        {
+          title: "VEX 로고 비주얼 스타일 확장 1",
+          image: "/images/ps/branding/ps5.png",
+        },
+        {
+          title: "VEX 로고 비주얼 스타일 확장 2",
+          image: "/images/ps/branding/ps6.png",
+        },
       ],
     },
     {
@@ -52,10 +58,22 @@ export default function PS() {
       tags: ["유튜브 썸네일"],
       cover: "/images/ps/thumbnail/cover.png",
       images: [
-        { title: "유튜브 썸네일 - 오븐마루 컨텐츠 1", image: "/images/ps/thumbnail/ps1.png" },
-        { title: "유튜브 썸네일 - 오븐마루 컨텐츠 2", image: "/images/ps/thumbnail/ps2.png" },
-        { title: "유튜브 썸네일 - VEX 공식창단홍보", image: "/images/ps/thumbnail/ps3.png" },
-        { title: "유튜브 썸네일 - VEX 클랜컵 홍보", image: "/images/ps/thumbnail/ps4.png" },
+        {
+          title: "유튜브 썸네일 - 오븐마루 컨텐츠 1",
+          image: "/images/ps/thumbnail/ps1.png",
+        },
+        {
+          title: "유튜브 썸네일 - 오븐마루 컨텐츠 2",
+          image: "/images/ps/thumbnail/ps2.png",
+        },
+        {
+          title: "유튜브 썸네일 - VEX 공식창단홍보",
+          image: "/images/ps/thumbnail/ps3.png",
+        },
+        {
+          title: "유튜브 썸네일 - VEX 클랜컵 홍보",
+          image: "/images/ps/thumbnail/ps4.png",
+        },
       ],
     },
     {
@@ -82,11 +100,26 @@ export default function PS() {
       tags: ["타이포그래피", "디자인"],
       cover: "/images/ps/typo/cover.png",
       images: [
-        { title: "VEX 강사진 채용 공고 포스터", image: "/images/ps/typo/ps1.png" },
-        { title: "VEX 촬영PD 채용 공고 포스터", image: "/images/ps/typo/ps2.png" },
-        { title: "VEX 영상편집자 & SNS 디자이너 채용 공고 포스터", image: "/images/ps/typo/ps3.png" },
-        { title: "VEX 아카데미 홍보 포스터 1", image: "/images/ps/typo/ps4.png" },
-        { title: "VEX 아카데미 홍보 포스터 2", image: "/images/ps/typo/ps5.png" },
+        {
+          title: "VEX 강사진 채용 공고 포스터",
+          image: "/images/ps/typo/ps1.png",
+        },
+        {
+          title: "VEX 촬영PD 채용 공고 포스터",
+          image: "/images/ps/typo/ps2.png",
+        },
+        {
+          title: "VEX 영상편집자 & SNS 디자이너 채용 공고 포스터",
+          image: "/images/ps/typo/ps3.png",
+        },
+        {
+          title: "VEX 아카데미 홍보 포스터 1",
+          image: "/images/ps/typo/ps4.png",
+        },
+        {
+          title: "VEX 아카데미 홍보 포스터 2",
+          image: "/images/ps/typo/ps5.png",
+        },
       ],
     },
     {
@@ -108,7 +141,9 @@ export default function PS() {
 
   useEffect(() => {
     const esc = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setSelectedImage(null);
+      if (e.key === "Escape") {
+        setSelectedImage(null);
+      }
     };
 
     window.addEventListener("keydown", esc);
@@ -116,7 +151,10 @@ export default function PS() {
   }, []);
 
   const card =
-    "cursor-pointer bg-black/30 border border-cyan-400/20 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-400/40 transition duration-300 group break-inside-avoid mb-10";
+    "cursor-pointer bg-black/30 border border-cyan-400/20 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-400/30 transition duration-150 ease-out group break-inside-avoid mb-10 hover:-translate-y-1";
+
+  const imageClass =
+    "block w-full max-h-[260px] object-contain mx-auto transition-transform duration-200 ease-out group-hover:scale-[1.03]";
 
   return (
     <section id="ps" className="py-32 text-center max-w-7xl mx-auto px-6">
@@ -138,7 +176,7 @@ export default function PS() {
                 <img
                   src={project.cover}
                   alt={project.title}
-                  className="block w-full max-h-[260px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.04]"
+                  className={imageClass}
                 />
 
                 {project.images.length > 1 && (
@@ -181,7 +219,7 @@ export default function PS() {
           <div className="flex items-center justify-between mb-10">
             <button
               onClick={() => setSelectedProject(null)}
-              className="px-4 py-2 rounded-full border border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 transition"
+              className="px-4 py-2 rounded-full border border-cyan-400/30 text-cyan-300 hover:bg-cyan-400/10 transition duration-150"
             >
               ← 폴더 목록
             </button>
@@ -201,11 +239,7 @@ export default function PS() {
                 className={card}
               >
                 <div className="w-full bg-black flex items-center justify-center p-3">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="block w-full max-h-[260px] object-contain mx-auto transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
+                  <img src={item.image} alt={item.title} className={imageClass} />
                 </div>
 
                 <div className="p-4 text-left">

@@ -84,55 +84,55 @@ section {
   .neon-card {
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.42);
     transition:
-      transform 260ms ease,
-      border-color 260ms ease,
-      box-shadow 260ms ease,
-      background 260ms ease;
+      transform 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease,
+      background 160ms ease;
     will-change: transform;
   }
 
   .neon-card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(34, 211, 238, 0.55);
-    background: rgba(255, 255, 255, 0.04);
+    transform: translateY(-5px);
+    border-color: rgba(34, 211, 238, 0.5);
+    background: rgba(255, 255, 255, 0.045);
     box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.18),
-      0 14px 44px rgba(0, 0, 0, 0.6),
-      0 0 26px rgba(34, 211, 238, 0.16);
+      0 0 0 1px rgba(34, 211, 238, 0.14),
+      0 12px 34px rgba(0, 0, 0, 0.55),
+      0 0 18px rgba(34, 211, 238, 0.14);
   }
 
   .neon-icon {
     transition:
-      transform 260ms ease,
-      border-color 260ms ease,
-      box-shadow 260ms ease,
-      background 260ms ease;
+      transform 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease,
+      background 160ms ease;
   }
 
   .group:hover .neon-icon {
     transform: translateY(-2px);
-    border-color: rgba(34, 211, 238, 0.55);
+    border-color: rgba(34, 211, 238, 0.5);
     background: rgba(34, 211, 238, 0.08);
     box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.18),
-      0 0 22px rgba(34, 211, 238, 0.16);
+      0 0 0 1px rgba(34, 211, 238, 0.14),
+      0 0 18px rgba(34, 211, 238, 0.13);
   }
 
   .timeline-dot {
     transition:
-      transform 260ms ease,
-      border-color 260ms ease,
-      box-shadow 260ms ease,
-      background 260ms ease;
+      transform 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease,
+      background 160ms ease;
   }
 
   .group:hover .timeline-dot {
-    transform: scale(1.06);
-    border-color: rgba(34, 211, 238, 0.85);
+    transform: scale(1.05);
+    border-color: rgba(34, 211, 238, 0.75);
     box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.2),
-      0 0 26px rgba(34, 211, 238, 0.22);
+      0 0 0 1px rgba(34, 211, 238, 0.16),
+      0 0 18px rgba(34, 211, 238, 0.16);
   }
 }

@@ -41,14 +41,14 @@ export default function Hero() {
             className="group w-24 h-24 rounded-2xl border border-cyan-400/35
                        bg-black/50 flex flex-col items-center justify-center
                        hover:border-cyan-300 hover:bg-cyan-400/10
-                       hover:-translate-y-2 transition duration-300
-                       shadow-[0_0_18px_rgba(34,211,238,0.12)]
-                       hover:shadow-[0_0_28px_rgba(34,211,238,0.45)]"
+                       hover:-translate-y-2 transition duration-150 ease-out
+                       shadow-[0_0_14px_rgba(34,211,238,0.12)]
+                       hover:shadow-[0_0_22px_rgba(34,211,238,0.32)]"
           >
             <span className="text-3xl font-black text-cyan-300 neon-text leading-none">
               {tool.label}
             </span>
-            <span className="mt-2 text-[11px] text-gray-400 group-hover:text-cyan-200 transition">
+            <span className="mt-2 text-[11px] text-gray-400 group-hover:text-cyan-200 transition duration-150">
               {tool.name}
             </span>
           </a>
@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="relative z-10 mt-10 flex gap-4">
         <a
           href="#contact"
-          className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-md hover:bg-cyan-400 hover:text-black transition shadow-[0_0_20px_rgba(34,211,238,0.12)]"
+          className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-md hover:bg-cyan-400 hover:text-black transition duration-150 shadow-[0_0_16px_rgba(34,211,238,0.12)]"
         >
           Contact Me
         </a>

@@ -53,15 +53,15 @@ const motionVideos: MotionItem[] = [
     url: "https://youtu.be/RcnSADNDSSk",
   },
   {
-      title: "VEX 프로게임단 공식 창단",
-      desc: "구단 홍보 영상",
-      tags: ["모션그래픽", "타이포"],
-      time: "0:48",
-      url: "BlB5Ns1i-UE",
+    title: "VEX 프로게임단 공식 창단",
+    desc: "구단 홍보 영상",
+    tags: ["모션그래픽", "타이포"],
+    time: "0:48",
+    url: "BlB5Ns1i-UE",
   },
 ];
 
-export default function MotionGraphic() {
+export default function AE() {
   const [open, setOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState<MotionItem | null>(null);
 
@@ -113,9 +113,7 @@ export default function MotionGraphic() {
         Adobe After Effects
       </h2>
 
-      <p className="text-gray-300 mb-12">
-        애프터 이펙트를 활용한 영상작업물
-      </p>
+      <p className="text-gray-300 mb-12">애프터 이펙트를 활용한 영상작업물</p>
 
       <div className="grid md:grid-cols-3 gap-10">
         {motionVideos.map((item, index) => {
@@ -130,8 +128,8 @@ export default function MotionGraphic() {
               key={index}
               onClick={() => openVideo(item)}
               className="bg-black/30 border border-cyan-400/20 rounded-xl overflow-hidden 
-                         shadow-lg hover:shadow-cyan-400/40 transition duration-300 text-left
-                         cursor-pointer group"
+                         shadow-lg hover:shadow-cyan-400/30 transition duration-150 ease-out text-left
+                         cursor-pointer group hover:-translate-y-1"
               aria-label={`${item.title} 영상 열기`}
             >
               <div className="relative aspect-video overflow-hidden bg-black">
@@ -139,25 +137,26 @@ export default function MotionGraphic() {
                   <img
                     src={thumbSrc}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-500 
-                               group-hover:scale-[1.08]"
+                    className="w-full h-full object-cover transition-transform duration-200 ease-out 
+                               group-hover:scale-[1.04]"
                     onError={(e) => {
                       e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                     }}
                   />
                 )}
 
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/35 transition duration-150 ease-out" />
 
                 <div
                   className="absolute inset-0 flex items-center justify-center
                              opacity-0 group-hover:opacity-100
-                             transition-all duration-300 ease-out"
+                             transition-all duration-150 ease-out"
                 >
                   <div
                     className="w-14 h-14 rounded-full bg-cyan-400/90
-                               shadow-[0_0_18px_rgba(34,211,238,0.85)]
-                               flex items-center justify-center"
+                               shadow-[0_0_14px_rgba(34,211,238,0.65)]
+                               flex items-center justify-center
+                               transition duration-150 ease-out"
                   >
                     <Play
                       className="w-7 h-7 text-black ml-[2px]"
@@ -206,7 +205,7 @@ export default function MotionGraphic() {
           }}
         >
           <div className="w-full max-w-5xl">
-            <div className="relative rounded-2xl overflow-hidden border border-cyan-400/40 bg-black shadow-[0_0_60px_rgba(0,255,255,0.18)]">
+            <div className="relative rounded-2xl overflow-hidden border border-cyan-400/40 bg-black shadow-[0_0_45px_rgba(0,255,255,0.16)]">
               <div className="aspect-video bg-black">
                 <iframe
                   className="w-full h-full"

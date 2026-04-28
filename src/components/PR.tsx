@@ -64,6 +64,20 @@ export default function Projects() {
       youtubeId: "https://www.youtube.com/watch?v=TV_-0JGcNCY&t=400s",
     },
     {
+      title: "VEX 오븐마루 컨텐츠 Karwn 하이라이트",
+      desc: "컨텐츠 영상 하이라이트 숏폼",
+      tags: ["메인편집 / 서브편집"],
+      time: "1:17",
+      youtubeId: "hHHpFhEkrPs",
+    },
+    {
+      title: "VEX 오븐마루 컨텐츠 ROY 하이라이트",
+      desc: "컨텐츠 영상 하이라이트 숏폼",
+      tags: ["메인편집 / 서브편집"],
+      time: "1:59",
+      youtubeId: "QlUnEFLPbFI",
+    },
+    {
       title: "Vex 로스터 소개 하이라이트 숏폼",
       desc: "구단 로스터 소개",
       tags: ["메인편집 / 서브편집"],

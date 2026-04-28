@@ -1,10 +1,24 @@
 const tools = [
-  { label: "PR", href: "#pr", name: "Premiere Pro" },
-  { label: "AE", href: "#ae", name: "After Effects" },
-  { label: "PS", href: "#ps", name: "Photoshop" },
+  { label: "PR", id: "pr", name: "Premiere Pro" },
+  { label: "AE", id: "ae", name: "After Effects" },
+  { label: "PS", id: "ps", name: "Photoshop" },
 ];
 
 export default function Hero() {
+  const moveToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const headerHeight = 74;
+    const targetY =
+      section.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <section
       id="home"
@@ -34,9 +48,10 @@ export default function Hero() {
 
       <div className="relative z-10 mt-10 flex flex-wrap justify-center gap-5">
         {tools.map((tool) => (
-          <a
+          <button
             key={tool.label}
-            href={tool.href}
+            type="button"
+            onClick={() => moveToSection(tool.id)}
             aria-label={`${tool.name} 섹션으로 이동`}
             className="group w-24 h-24 rounded-2xl border border-cyan-400/35
                        bg-black/50 flex flex-col items-center justify-center
@@ -51,17 +66,18 @@ export default function Hero() {
             <span className="mt-2 text-[11px] text-gray-400 group-hover:text-cyan-200 transition duration-150">
               {tool.name}
             </span>
-          </a>
+          </button>
         ))}
       </div>
 
       <div className="relative z-10 mt-10 flex gap-4">
-        <a
-          href="#contact"
+        <button
+          type="button"
+          onClick={() => moveToSection("contact")}
           className="px-6 py-3 border border-cyan-400 text-cyan-400 rounded-md hover:bg-cyan-400 hover:text-black transition duration-150 shadow-[0_0_16px_rgba(34,211,238,0.12)]"
         >
           Contact Me
-        </a>
+        </button>
       </div>
     </section>
   );

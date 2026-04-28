@@ -1,27 +1,31 @@
 import { useEffect, useState } from "react";
 
+const navItems = [
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "PR", id: "pr" },
+  { name: "AE", id: "ae" },
+  { name: "PS", id: "ps" },
+  { name: "Experience", id: "experience" },
+  { name: "Contact", id: "contact" },
+];
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState("home");
 
-  const navItems = [
-    { name: "Home", id: "home" },
-    { name: "About", id: "about" },
-    { name: "PR", id: "pr" },
-    { name: "AE", id: "ae" },
-    { name: "PS", id: "ps" },
-    { name: "Experience", id: "experience" },
-    { name: "Contact", id: "contact" },
-  ];
-
   useEffect(() => {
     const onScroll = () => {
+      const checkLine = window.innerHeight * 0.35;
       let currentId = "home";
 
       for (const item of navItems) {
         const section = document.getElementById(item.id);
+        if (!section) continue;
 
-        if (section && section.getBoundingClientRect().top <= 140) {
+        const top = section.getBoundingClientRect().top;
+
+        if (top <= checkLine) {
           currentId = item.id;
         }
       }
@@ -30,52 +34,70 @@ export default function Header() {
     };
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        setMenuOpen(false);
-      }
+      if (e.key === "Escape") setMenuOpen(false);
     };
 
     onScroll();
 
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
     window.addEventListener("keydown", onKeyDown);
 
     return () => {
       window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
       window.removeEventListener("keydown", onKeyDown);
     };
   }, []);
 
+  const moveToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const headerHeight = 74;
+    const targetY =
+      section.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth",
+    });
+
+    setActiveId(id);
+    setMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-40 border-b border-cyan-500/10 bg-black/75 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
-        <a
-          href="#home"
+        <button
+          type="button"
+          onClick={() => moveToSection("home")}
           className="text-2xl font-semibold tracking-wide text-cyan-400 logo-neon"
-          onClick={() => setMenuOpen(false)}
         >
           Heon
-        </a>
+        </button>
 
         <nav className="hidden items-center gap-8 text-sm text-gray-200 md:flex">
           {navItems.map((item) => {
             const active = activeId === item.id;
 
             return (
-              <a
+              <button
                 key={item.id}
-                href={`#${item.id}`}
+                type="button"
+                onClick={() => moveToSection(item.id)}
                 className={`group relative transition-colors ${
                   active ? "text-cyan-300" : "hover:text-cyan-300"
                 }`}
               >
                 {item.name}
                 <span
-                  className={`pointer-events-none absolute inset-x-0 -bottom-1 h-[2px] bg-cyan-400/70 transition-transform duration-200 ${
+                  className={`pointer-events-none absolute inset-x-0 -bottom-1 h-[2px] origin-center bg-cyan-400/70 transition-transform duration-150 ${
                     active ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
-              </a>
+              </button>
             );
           })}
         </nav>
@@ -113,18 +135,18 @@ export default function Header() {
       >
         <nav className="flex flex-col px-4 py-3">
           {navItems.map((item) => (
-            <a
+            <button
               key={item.id}
-              href={`#${item.id}`}
-              className={`rounded-lg px-3 py-3 text-sm transition ${
+              type="button"
+              onClick={() => moveToSection(item.id)}
+              className={`rounded-lg px-3 py-3 text-left text-sm transition ${
                 activeId === item.id
                   ? "bg-cyan-400/10 text-cyan-300"
                   : "text-gray-200 hover:bg-cyan-400/10 hover:text-cyan-300"
               }`}
-              onClick={() => setMenuOpen(false)}
             >
               {item.name}
-            </a>
+            </button>
           ))}
         </nav>
       </div>

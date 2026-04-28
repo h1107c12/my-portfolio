@@ -50,7 +50,7 @@ export default function PS() {
     desc: "SNS 마케팅용 배너 및 포스터 디자인",
     tags: ["광고", "SNS"],
     cover: "/images/ps/banner/cover.png",
-    images: Array.from({ length: 7 }, (_, i) => ({
+    images: Array.from({ length: 8 }, (_, i) => ({
       title: `마케팅 작업 ${String(i + 1).padStart(2, "0")}`,
       image: `/images/ps/banner/ps${i + 1}.png`,
     })),
@@ -62,6 +62,16 @@ export default function PS() {
     cover: "/images/ps/typo/cover.png",
     images: Array.from({ length: 5 }, (_, i) => ({
       title: `타이포 작업 ${String(i + 1).padStart(2, "0")}`,
+      image: `/images/ps/typo/ps${i + 1}.png`,
+    })),
+  },
+  {
+    title: "개인방송용 배너",
+    desc: "구단소속과 닉네임 그리고 스폰서",
+    tags: ["배너", "디자인"],
+    cover: "/images/ps/banner2/cover.png",
+    images: Array.from({ length: 5 }, (_, i) => ({
+      title: `배너 작업 ${String(i + 1).padStart(2, "0")}`,
       image: `/images/ps/typo/ps${i + 1}.png`,
     })),
   },

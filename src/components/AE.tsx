@@ -47,7 +47,7 @@ const motionVideos: MotionItem[] = [
   },
   {
     title: "Simple Animation",
-    desc: "퍼펫핀과 키프레임을 활용하여 만든 간단한 애니메이션",
+    desc: "모션그래픽을 활용하여 만든 간단한 애니메이션",
     tags: ["모션그래픽", "애니메이션"],
     time: "0:20",
     url: "https://youtu.be/RcnSADNDSSk",
@@ -55,7 +55,7 @@ const motionVideos: MotionItem[] = [
   {
       title: "VEX 프로게임단 공식 창단",
       desc: "구단 홍보 영상",
-      tags: ["메인편집 / 서브편집"],
+      tags: ["모션그래픽", "타이포"],
       time: "0:48",
       url: "BlB5Ns1i-UE",
   },

@@ -66,14 +66,14 @@ export default function Projects() {
     {
       title: "Vex 로스터 소개 하이라이트 숏폼",
       desc: "구단 로스터 소개",
-      tags: ["메인편집"],
+      tags: ["메인편집 / 서브편집"],
       time: "16:01",
       youtubeId: "vo_cAE0P2ew",
     },
     {
       title: "개인 유튜브 '재뜩' 숏폼",
       desc: "배틀그라운드 콘텐츠",
-      tags: ["메인편집"],
+      tags: ["메인편집 / 서브편집"],
       time: "0:55",
       youtubeId:
         "UWCkwuqF7n4",

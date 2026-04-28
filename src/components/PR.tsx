@@ -62,14 +62,14 @@ export default function PR() {
       youtubeId: "https://www.youtube.com/watch?v=TV_-0JGcNCY&t=400s",
     },
     {
-      title: "VEX 오븐마루 컨텐츠 Karwn 하이라이트",
+      title: "VEX 오븐마루 컨텐츠 숏폼 1",
       desc: "컨텐츠 영상 하이라이트 숏폼",
       tags: ["메인편집 / 서브편집"],
       time: "1:17",
       youtubeId: "hHHpFhEkrPs",
     },
     {
-      title: "VEX 오븐마루 컨텐츠 ROY 하이라이트",
+      title: "VEX 오븐마루 컨텐츠 숏폼 2",
       desc: "컨텐츠 영상 하이라이트 숏폼",
       tags: ["메인편집 / 서브편집"],
       time: "1:59",

@@ -42,7 +42,8 @@ export default function Hero() {
         Heon
       </h1>
 
-      <p className="relative z-10 mt-6 text-gray-300 max-w-2xl mx-auto">
+      {/* 🔥 여기 수정 */}
+      <p className="relative z-10 mt-6 text-gray-300 max-w-[320px] md:max-w-2xl mx-auto break-keep md:break-normal leading-relaxed">
         영상 제작을 기반으로 브랜드와 콘텐츠를 만드는 크리에이터
       </p>
 

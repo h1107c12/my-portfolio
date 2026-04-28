@@ -15,76 +15,92 @@ type PSProject = {
 
 export default function PS() {
   const psProjects: PSProject[] = [
-  {
-    title: "스폰서 포스터",
-    desc: "e스포츠 스폰서 체결 홍보 포스터",
-    tags: ["포스터", "디자인"],
-    cover: "/images/ps/poster/cover.png",
-    images: Array.from({ length: 10 }, (_, i) => ({
-      title: `포스터 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/poster/ps${i + 1}.png`,
-    })),
-  },
-  {
-    title: "유튜브 썸네일",
-    desc: "클릭 유도형 콘텐츠 썸네일 디자인",
-    tags: ["썸네일", "콘텐츠"],
-    cover: "/images/ps/thumbnail/cover.png",
-    images: Array.from({ length: 4 }, (_, i) => ({
-      title: `썸네일 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/thumbnail/ps${i + 1}.png`,
-    })),
-  },
-  {
-    title: "유니폼 디자인",
-    desc: "e스포츠 팀 유니폼 그래픽 디자인",
-    tags: ["브랜딩", "디자인"],
-    cover: "/images/ps/uniform/cover.png",
-    images: Array.from({ length: 4 }, (_, i) => ({
-      title: `유니폼 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/uniform/ps${i + 1}.png`,
-    })),
-  },
-  {
-    title: "SNS 마케팅 포스터",
-    desc: "SNS 마케팅용 배너 및 포스터 디자인",
-    tags: ["광고", "SNS"],
-    cover: "/images/ps/banner/cover.png",
-    images: Array.from({ length: 8 }, (_, i) => ({
-      title: `마케팅 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/banner/ps${i + 1}.png`,
-    })),
-  },
-  {
-    title: "타이포그래피 포스터",
-    desc: "텍스트 중심의 타이포그래피 디자인",
-    tags: ["타이포그래피", "디자인"],
-    cover: "/images/ps/typo/cover.png",
-    images: Array.from({ length: 5 }, (_, i) => ({
-      title: `타이포 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/typo/ps${i + 1}.png`,
-    })),
-  },
-  {
-    title: "개인방송용 배너",
-    desc: "구단소속과 닉네임 그리고 스폰서",
-    tags: ["배너", "디자인"],
-    cover: "/images/ps/banner2/cover.png",
-    images: Array.from({ length: 5 }, (_, i) => ({
-      title: `배너 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/typo/ps${i + 1}.png`,
-    })),
-  },
-  {
-    title: "로고 기반 비주얼 포스터",
-    desc: "기존 로고를 활용해 그래픽 요소를 확장한 SNS 포스터 디자인",
-    tags: ["SNS", "브랜딩", "비주얼"],
-    cover: "/images/ps/logo/cover.png",
-    images: Array.from({ length: 2 }, (_, i) => ({
-      title: `로고 기반 비주얼 작업 ${String(i + 1).padStart(2, "0")}`,
-      image: `/images/ps/logo/ps${i + 1}.png`,
-    })),
-  },
+{
+  title: "브랜딩 디자인",
+  desc: "팀 아이덴티티를 기반으로 한 브랜딩 및 비주얼 확장 디자인",
+  tags: ["유니폼", "비주얼 디자인"],
+  cover: "/images/ps/branding/cover.png",
+  images: [
+    { title: "VEX 유니폼 저지 앞", image: "/images/ps/branding/ps1.png" },
+    { title: "VEX 유니폼 저지 뒤", image: "/images/ps/branding/ps2.png" },
+    { title: "VEX 유니폼 앞", image: "/images/ps/branding/ps3.png" },
+    { title: "VEX 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
+    { title: "VEX 로고 비주얼 스타일 확장 1", image: "/images/ps/branding/ps5.png" },
+    { title: "VEX 로고 비주얼 스타일 확장 2", image: "/images/ps/branding/ps6.png" },
+  ],
+},
+{
+  title: "스폰서 & 협업 디자인",
+  desc: "스폰서 협업 및 브랜드 노출을 위한 홍보 디자인",
+  tags: ["스폰서 포스터", "콘텐츠"],
+  cover: "/images/ps/sponsor/cover.png",
+  images: [
+    { title: "ADATA x VEX", image: "/images/ps/sponsor/ps1.png" },
+    { title: "GIGABYTE BATTLE G x VEX", image: "/images/ps/sponsor/ps2.png" },
+    { title: "BATTLE G x VEX", image: "/images/ps/sponsor/ps3.png" },
+    { title: "GIGABYTE x VEX", image: "/images/ps/sponsor/ps4.png" },
+    { title: "하루펫약선 x VEX", image: "/images/ps/sponsor/ps5.png" },
+    { title: "PLAYMALL x VEX", image: "/images/ps/sponsor/ps6.png" },
+    { title: "ENP GAMES x VEX", image: "/images/ps/sponsor/ps7.png" },
+    { title: "vaxee x VEX", image: "/images/ps/sponsor/ps8.png" },
+    { title: "twire.gg x VEX", image: "/images/ps/sponsor/ps9.png" },
+  ],
+},
+{
+  title: "콘텐츠 썸네일",
+  desc: "클릭 유도를 위한 콘텐츠 썸네일 디자인",
+  tags: ["유튜브 썸네일"],
+  cover: "/images/ps/thumbnail/cover.png",
+  images: [
+    { title: "유튜브 썸네일 - 오븐마루 컨텐츠 1", image: "/images/ps/thumbnail/ps1.png" },
+    { title: "유튜브 썸네일 - 오븐마루 컨텐츠 2", image: "/images/ps/thumbnail/ps2.png" },
+    { title: "유튜브 썸네일 - VEX 공식창단홍보", image: "/images/ps/thumbnail/ps3.png" },
+    { title: "유튜브 썸네일 - VEX 클랜컵 홍보", image: "/images/ps/thumbnail/ps4.png" },
+  ],
+},
+{
+  title: "SNS 마케팅 디자인",
+  desc: "SNS 채널 운영을 위한 마케팅 이미지 디자인",
+  tags: ["SNS", "비주얼"],
+  cover: "/images/ps/SNS/cover.png",
+  images: [
+    { title: "WELCOME 2STEB4N", image: "/images/ps/SNS/ps1.png" },
+    { title: "WELCOME ROY", image: "/images/ps/SNS/ps2.png" },
+    { title: "WELCOME Nyeong", image: "/images/ps/SNS/ps3.png" },
+    { title: "WELCOME Karwn", image: "/images/ps/SNS/ps4.png" },
+    { title: "WELCOME Lure", image: "/images/ps/SNS/ps5.png" },
+    { title: "WELCOME Forward", image: "/images/ps/SNS/ps6.png" },
+    { title: "WELCOME Beom", image: "/images/ps/SNS/ps7.png" },
+    { title: "유니폼 판매 홍보 포스터", image: "/images/ps/SNS/ps8.png" },
+    { title: "VEX PWS 참가 홍보 포스터", image: "/images/ps/SNS/ps9.png" },
+    { title: "VEX 스크림 참가 홍보 포스터", image: "/images/ps/SNS/ps10.png" },
+  ],
+},
+{
+  title: "모집 & 정보 전달 디자인",
+  desc: "정보 전달 중심의 타이포그래피 기반 포스터 디자인",
+  tags: ["타이포그래피", "디자인"],
+  cover: "/images/ps/typo/cover.png",
+  images: [
+    { title: "VEX 강사진 채용 공고 포스터", image: "/images/ps/typo/ps1.png" },
+    { title: "VEX 촬영PD 채용 공고 포스터", image: "/images/ps/typo/ps2.png" },
+    { title: "VEX 영상편집자 & SNS 디자이너 채용 공고 포스터", image: "/images/ps/typo/ps3.png" },
+    { title: "VEX 아카데미 홍보 포스터 1", image: "/images/ps/typo/ps4.png" },
+    { title: "VEX 아카데미 홍보 포스터 2", image: "/images/ps/typo/ps5.png" },
+  ],
+},
+{
+  title: "배너 & 월페이퍼",
+  desc: "스트리밍 및 개인 사용을 위한 배너 및 배경화면 디자인",
+  tags: ["배너", "디자인"],
+  cover: "/images/ps/banner/cover.png",
+  images: [
+    { title: "선수 개인 방송 배너 1", image: "/images/ps/banner/ps1.png" },
+    { title: "선수 개인 방송 배너 2", image: "/images/ps/banner/ps2.png" },
+    { title: "선수 개인 방송 배너 3", image: "/images/ps/banner/ps3.png" },
+    { title: "선수 개인 바탕화면", image: "/images/ps/banner/ps4.png" },
+  ],
+},
 ];
 
   const [selectedProject, setSelectedProject] = useState<PSProject | null>(null);

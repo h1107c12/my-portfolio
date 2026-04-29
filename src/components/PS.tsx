@@ -96,6 +96,14 @@ export default function PS() {
             title: "유튜브 썸네일 - VEX 클랜컵 홍보",
             image: "/images/ps/thumbnail/ps4.png",
           },
+          {
+            title: "유튜브 썸네일 - 오븐마루 컨텐츠 숏폼 1",
+            image: "/images/ps/thumbnail/ps5.png",
+          },
+          {
+            title: "유튜브 썸네일 - 오븐마루 컨텐츠 숏폼 2",
+            image: "/images/ps/thumbnail/ps6.png",
+          },
         ],
       },
       {

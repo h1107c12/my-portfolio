@@ -66,7 +66,7 @@ export default function PR() {
       desc: "컨텐츠 영상 하이라이트 숏폼",
       tags: ["메인편집 / 서브편집"],
       time: "1:17",
-      youtubeId: "hHHpFhEkrPs",
+      youtubeId: "vewtwU243vs",
     },
     {
       title: "VEX 오븐마루 컨텐츠 숏폼 2",

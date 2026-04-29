@@ -48,12 +48,16 @@ export default function PS() {
           { title: "VEX 유니폼 앞", image: "/images/ps/branding/ps3.png" },
           { title: "VEX 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
           {
-            title: "VEX 로고 비주얼 스타일 확장 1",
-            image: "/images/ps/branding/ps5.png",
+            title: "VEX 로고 비주얼 스타일 확장 1", image: "/images/ps/branding/ps5.png",
           },
           {
-            title: "VEX 로고 비주얼 스타일 확장 2",
-            image: "/images/ps/branding/ps6.png",
+            title: "VEX 로고 비주얼 스타일 확장 2", image: "/images/ps/branding/ps6.png",
+          },
+          {
+            title: "VEX BG 디자인 소스", image: "/images/ps/branding/ps7.png",
+          },
+          {
+            title: "VEX 아카데미 로고 제작", image: "/images/ps/branding/ps8.png",
           },
         ],
       },
@@ -89,20 +93,24 @@ export default function PS() {
             image: "/images/ps/thumbnail/ps2.png",
           },
           {
-            title: "유튜브 썸네일 - VEX 공식창단홍보",
+            title: "유튜브 썸네일 - VEX 공식창단홍보 1",
             image: "/images/ps/thumbnail/ps3.png",
           },
           {
-            title: "유튜브 썸네일 - VEX 클랜컵 홍보",
+            title: "유튜브 썸네일 - VEX 공식창단홍보 (Re)",
             image: "/images/ps/thumbnail/ps4.png",
           },
           {
-            title: "유튜브 썸네일 - 오븐마루 컨텐츠 숏폼 1",
+            title: "유튜브 썸네일 - VEX 클랜컵 홍보",
             image: "/images/ps/thumbnail/ps5.png",
           },
           {
-            title: "유튜브 썸네일 - 오븐마루 컨텐츠 숏폼 2",
+            title: "유튜브 썸네일 - 오븐마루 컨텐츠 숏폼 1",
             image: "/images/ps/thumbnail/ps6.png",
+          },
+          {
+            title: "유튜브 썸네일 - 오븐마루 컨텐츠 숏폼 2",
+            image: "/images/ps/thumbnail/ps7.png",
           },
         ],
       },

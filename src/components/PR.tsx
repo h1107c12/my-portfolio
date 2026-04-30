@@ -83,17 +83,17 @@ export default function PR() {
       youtubeId: "vo_cAE0P2ew",
     },
     {
-      title: "개인 유튜브 '재뜩' 숏폼",
+      title: "개인 유튜브 숏폼",
       desc: "배틀그라운드 콘텐츠",
       tags: ["메인편집 / 서브편집"],
       time: "0:55",
       youtubeId: "UWCkwuqF7n4",
     },{
       title: "개인 유튜브 숏폼",
-      desc: "일상",
+      desc: "이슈",
       tags: ["메인편집 / 서브편집"],
       time: "0:25",
-      youtubeId: "SPYPw9Tu11Q",
+      youtubeId: "rcPfIa5bhG0",
     },
   ];
 

@@ -88,6 +88,12 @@ export default function PR() {
       tags: ["메인편집 / 서브편집"],
       time: "0:55",
       youtubeId: "UWCkwuqF7n4",
+    },{
+      title: "개인 유튜브 숏폼",
+      desc: "일상",
+      tags: ["메인편집 / 서브편집"],
+      time: "0:25",
+      youtubeId: "SPYPw9Tu11Q",
     },
   ];
 

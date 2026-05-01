@@ -103,6 +103,13 @@ export default function PR() {
       time: "0:15",
       youtubeId: "4QDbBZ9vVM4",
     },
+    {
+      title: "개인 유튜브 숏폼",
+      desc: "이슈",
+      tags: ["메인편집 / 서브편집"],
+      time: "0:14",
+      youtubeId: "2ZU-ATHoZXA",
+    },
   ];
 
   const [open, setOpen] = useState(false);

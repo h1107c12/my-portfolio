@@ -46,11 +46,11 @@ const motionVideos: MotionItem[] = [
     url: "https://youtu.be/RSpmSNbh8zI",
   },
   {
-    title: "Simple Animation",
-    desc: "모션그래픽을 활용하여 만든 간단한 애니메이션",
+    title: "VEX 로스터 소개영상 인트로",
+    desc: "모션그래픽을 활용하여 만든 간단한 구단 인트로",
     tags: ["모션그래픽", "애니메이션"],
-    time: "0:20",
-    url: "https://youtu.be/RcnSADNDSSk",
+    time: "0:06",
+    url: "8A1hQZsKxiA",
   },
   {
     title: "VEX 프로게임단 공식 창단",
@@ -58,6 +58,13 @@ const motionVideos: MotionItem[] = [
     tags: ["모션그래픽", "타이포"],
     time: "0:48",
     url: "BlB5Ns1i-UE",
+  },
+  {
+    title: "Simple Animation",
+    desc: "모션그래픽을 활용하여 만든 간단한 방송대기화면",
+    tags: ["모션그래픽", "애니메이션"],
+    time: "0:20",
+    url: "https://youtu.be/RcnSADNDSSk",
   },
 ];
 

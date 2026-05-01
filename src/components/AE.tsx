@@ -55,7 +55,7 @@ const motionVideos: MotionItem[] = [
   {
     title: "VEX 프로게임단 공식 창단",
     desc: "구단 홍보 영상",
-    tags: ["모션그래픽", "타이포"],
+    tags: ["모션그래픽", "타이포", "AI 활용"],
     time: "0:48",
     url: "BlB5Ns1i-UE",
   },

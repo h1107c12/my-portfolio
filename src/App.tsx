@@ -20,11 +20,11 @@ export default function App() {
         <main>
           <Hero />
           <About />
+          <Skills />
           <PR />
           <AE />
           <PS />
           <Experience />
-          <Skills />
           <Contact />
         </main>
 

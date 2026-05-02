@@ -2,7 +2,7 @@ export default function Skills() {
   const skills = [
     {
       title: "Premiere Pro",
-      desc: "영상 편집 및 컷 편집",
+      desc: "컷 편집, 자막, 사운드 및 효과를 활용한 영상 제작",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path
@@ -27,7 +27,7 @@ export default function Skills() {
     },
     {
       title: "After Effects",
-      desc: "간단한 모션 그래픽, VFX, 타이틀 애니메이션 제작",
+      desc: "간단한 모션 그래픽, 타이틀 애니메이션 제작",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path
@@ -69,7 +69,7 @@ export default function Skills() {
     },
     {
       title: "CapCut",
-      desc: "트렌디한 숏폼 & 릴스 작업 전문",
+      desc: "트렌디한 숏폼 & 릴스 작업",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path
@@ -92,7 +92,7 @@ export default function Skills() {
     },
     {
       title: "Photoshop",
-      desc: "썸네일 디자인, 그래픽 소스 제작 및 편집",
+      desc: "썸네일 디자인, 기본적인 그래픽 편집",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path

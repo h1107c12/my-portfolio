@@ -52,7 +52,7 @@ export default function Skills() {
     },
     {
       title: "AI",
-      desc: "생성형 비디오 및 이미지를 효율적 활용",
+      desc: "생성형 이미지 및 비디오를 효율적 활용",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path
@@ -92,7 +92,7 @@ export default function Skills() {
     },
     {
       title: "Photoshop",
-      desc: "썸네일 디자인, 기본적인 그래픽 편집",
+      desc: "기본적인 그래픽 편집",
       icon: (
         <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
           <path

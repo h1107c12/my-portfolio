@@ -53,8 +53,8 @@ export default function About() {
           </div>
 
           <div className="bg-[#050b10] border border-cyan-500/15 rounded-xl px-6 py-6 text-center">
-            <h4 className="text-cyan-300 mb-2">쇼츠 / 릴스</h4>
-            <p className="text-xs md:text-sm text-gray-300">빠르게 소비되는 콘텐츠에 최적화된 편집</p>
+            <h4 className="text-cyan-300 mb-2">숏폼 / 롱폼</h4>
+            <p className="text-xs md:text-sm text-gray-300">짧게는 임팩트 있게, 길게는 몰입감 있게</p>
           </div>
 
           <div className="bg-[#050b10] border border-cyan-500/15 rounded-xl px-6 py-6 text-center">

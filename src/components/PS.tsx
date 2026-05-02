@@ -212,7 +212,7 @@ export default function PS() {
         Adobe Photoshop
       </h2>
 
-      <p className="text-gray-300 mb-12">포토샵을 활용한 디자인 작업물</p>
+      <p className="text-gray-300 mb-12">AI와 포토샵을 활용한 디자인 작업물</p>
 
       <div className="relative">
         <div

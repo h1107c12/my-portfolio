@@ -83,6 +83,13 @@ export default function PR() {
       youtubeId: "vo_cAE0P2ew",
     },
     {
+      title: "주식 숏폼 테스트 작업",
+      desc: "주식 숏폼",
+      tags: [],
+      time: "1:08",
+      youtubeId: "dV5Ka1xCXYc",
+    },
+    {
       title: "개인 유튜브 숏폼",
       desc: "배틀그라운드 콘텐츠",
       tags: [],

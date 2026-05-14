@@ -90,13 +90,6 @@ export default function PR() {
       youtubeId: "dV5Ka1xCXYc",
     },
     {
-      title: "이상한마케팅 사전미션 작업",
-      desc: "사전미션 작업",
-      tags: ["메인편집", "B-Roll 구성", "모션그래픽", "컷 편집", "자막 디자인", "사운드 디자인", "오디오 믹싱", "색보정", "기여도 100%"],
-      time: "1:58",
-      youtubeId: "slsmOtcDJXc",
-    },
-    {
       title: "개인 유튜브 숏폼",
       desc: "배틀그라운드 콘텐츠",
       tags: [],

@@ -77,6 +77,7 @@ export default function PS() {
           { title: "ENP GAMES x VEX", image: "/images/ps/sponsor/ps7.png" },
           { title: "vaxee x VEX", image: "/images/ps/sponsor/ps8.png" },
           { title: "twire.gg x VEX", image: "/images/ps/sponsor/ps9.png" },
+          { title: "호남대 x VEX", image: "/images/ps/sponsor/ps10.png" },
         ],
       },
       {

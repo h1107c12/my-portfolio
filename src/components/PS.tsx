@@ -47,6 +47,7 @@ export default function PS() {
           { title: "VEX 유니폼 저지 뒤", image: "/images/ps/branding/ps2.png" },
           { title: "VEX 유니폼 앞", image: "/images/ps/branding/ps3.png" },
           { title: "VEX 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
+          { title: "2026 VEX 유니폼 시안", image: "/images/ps/branding/ps9.png" },
           {
             title: "VEX 로고 비주얼 스타일 확장 1", image: "/images/ps/branding/ps5.png",
           },

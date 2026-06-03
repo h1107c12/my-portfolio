@@ -151,10 +151,6 @@ export default function PS() {
             title: "VEX 아카데미 홍보 포스터 1",
             image: "/images/ps/typo/ps4.png",
           },
-          {
-            title: "VEX 아카데미 홍보 포스터 2",
-            image: "/images/ps/typo/ps5.png",
-          },
         ],
       },
       {

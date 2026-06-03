@@ -148,9 +148,21 @@ export default function PS() {
             image: "/images/ps/typo/ps3.png",
           },
           {
-            title: "VEX 아카데미 홍보 포스터 1",
+            title: "VEX 아카데미 홍보 포스터",
             image: "/images/ps/typo/ps4.png",
           },
+          {
+            title: "VEX 스트리머 영입 포스터",
+            image: "/images/ps/typo/ps5.png",
+          },
+          {
+            title: "VEX 감독 프로필 카드",
+            image: "/images/ps/typo/ps6.png",
+          },
+          {
+            title: "VEX 코치 프로필 카드",
+            image: "/images/ps/typo/ps7.png",
+          },  
         ],
       },
       {

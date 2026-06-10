@@ -82,41 +82,6 @@ export default function PR() {
       time: "1:35",
       youtubeId: "vo_cAE0P2ew",
     },
-    {
-      title: "주식 숏폼 테스트 작업",
-      desc: "테스트 작업",
-      tags: [],
-      time: "1:08",
-      youtubeId: "dV5Ka1xCXYc",
-    },
-    {
-      title: "개인 유튜브 숏폼",
-      desc: "배틀그라운드 콘텐츠",
-      tags: [],
-      time: "0:55",
-      youtubeId: "UWCkwuqF7n4",
-    },
-    {
-      title: "개인 유튜브 숏폼",
-      desc: "이슈",
-      tags: [],
-      time: "0:25",
-      youtubeId: "rcPfIa5bhG0",
-    },
-    {
-      title: "개인 유튜브 숏폼",
-      desc: "이슈",
-      tags: [],
-      time: "0:15",
-      youtubeId: "4QDbBZ9vVM4",
-    },
-    {
-      title: "개인 유튜브 숏폼",
-      desc: "이슈",
-      tags: [],
-      time: "0:14",
-      youtubeId: "2ZU-ATHoZXA",
-    },
   ];
 
   const [open, setOpen] = useState(false);

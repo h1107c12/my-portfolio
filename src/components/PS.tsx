@@ -124,6 +124,7 @@ export default function PS() {
           { title: "WELCOME 2STEB4N", image: "/images/ps/SNS/ps1.png" },
           { title: "유니폼 판매 홍보 포스터", image: "/images/ps/SNS/ps2.png" },
           { title: "VEX PWS 참가 홍보 포스터", image: "/images/ps/SNS/ps3.png" },
+          { title: "VEX 스크림 참가 홍보 포스터2", image: "/images/ps/SNS/ps6.png" },  
           { title: "VEX 스크림 참가 홍보 포스터", image: "/images/ps/SNS/ps4.png" },
           { title: "VEX 유니폼 이벤트 포스터", image: "/images/ps/SNS/ps5.png" },
         ],

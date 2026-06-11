@@ -43,11 +43,10 @@ export default function PS() {
         tags: ["유니폼", "비주얼 디자인"],
         cover: "/images/ps/branding/cover.png",
         images: [
-          { title: "VEX 유니폼 저지 앞", image: "/images/ps/branding/ps1.png" },
-          { title: "VEX 유니폼 저지 뒤", image: "/images/ps/branding/ps2.png" },
           { title: "VEX 유니폼 앞", image: "/images/ps/branding/ps3.png" },
           { title: "VEX 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
-          { title: "2026 VEX 유니폼 시안", image: "/images/ps/branding/ps9.png" },
+          { title: "VEX 시즌 2 유니폼", image: "/images/ps/branding/ps1.png" },
+          { title: "VEX 시즌 2 저지", image: "/images/ps/branding/ps2.png" },
           {
             title: "VEX 로고 비주얼 스타일 확장 1", image: "/images/ps/branding/ps5.png",
           },

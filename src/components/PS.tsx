@@ -43,8 +43,8 @@ export default function PS() {
         tags: ["유니폼", "비주얼 디자인"],
         cover: "/images/ps/branding/cover.png",
         images: [
-          { title: "VEX 유니폼 앞", image: "/images/ps/branding/ps3.png" },
-          { title: "VEX 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
+          { title: "VEX 시즌 1 유니폼 앞", image: "/images/ps/branding/ps3.png" },
+          { title: "VEX 시즌 1 유니폼 뒤", image: "/images/ps/branding/ps4.png" },
           { title: "VEX 시즌 2 유니폼", image: "/images/ps/branding/ps1.png" },
           { title: "VEX 시즌 2 저지", image: "/images/ps/branding/ps2.png" },
           {
@@ -153,6 +153,10 @@ export default function PS() {
           {
             title: "VEX 스트리머 영입 포스터",
             image: "/images/ps/typo/ps5.png",
+          },
+          {
+            title: "VEX 스트리머 영입 포스터2",
+            image: "/images/ps/typo/ps8.png",
           },
           {
             title: "VEX 감독 프로필 카드",

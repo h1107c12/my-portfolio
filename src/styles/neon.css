@@ -1,2 +1,47 @@
-/* 가능하면 neon.css는 안 쓰는 걸 추천
-   (index.css의 neon-text / neon-border와 충돌남) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes resumeOpen {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes scrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(18px);
+    opacity: 0;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-resumeOpen {
+  animation: resumeOpen 0.28s ease-out;
+}
+
+.animate-scrollDot {
+  animation: scrollDot 1.8s infinite;
+}
